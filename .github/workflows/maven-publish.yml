@@ -17,3 +17,5 @@ jobs:
     - name: Build with Maven
       run: mvn clean package
     - run: ls -ltr
+    - run: docker build -t abc:v1 .
+    
