@@ -27,8 +27,8 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build and push
-      uses: docker/build-push-action@v4
-      with:
-        push: true
-        tags: gagandeepthinknyx/gittest:latest
+      run: |
+        docker build -t gagandeepthinknyx/gittest:latest .
+        docker images
+        docker push gagandeepthinknyx/gittest:latest
     
